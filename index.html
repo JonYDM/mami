@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Para la mejor mami</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+
+<body>
+
+    
+
+    <h1>Te amo mucho mami eres la mejor</h1>
+    <h2>Muchas gracias por todo lo que haces por mi, admiro tu fortaleza y fuerza de corazón, te lo debo todo.</h2>
+
+    <div class="audio">
+        <button id="playButton">Reproducir música de fondo</button>
+    </div>
+    
+
+    <audio id="backgroundMusic" loop>
+        <source src="audio/Gracias MamaCasi creativo.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+      
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var audio = document.getElementById('backgroundMusic');
+            var playButton = document.getElementById('playButton');
+
+            playButton.addEventListener('click', function () {
+                if (audio.paused) {
+                    audio.play();
+                    playButton.textContent = 'Pausar música de fondo';
+                } else {
+                    audio.pause();
+                    playButton.textContent = 'Reproducir música de fondo';
+                }
+            });
+        });
+    </script>
+
+
+    <div class="galeria">
+        <div class="imagen" id="imagen1">
+            <img src="img/chico.jpg" alt="Imagen 1">
+            <div class="texto">Momentos juntos</div>
+        </div>
+        <div class="imagen" id="imagen2">
+            <img src="img/dientes.jpg" alt="Imagen 2">
+            <div class="texto">Risas juntos</div>
+        </div>
+
+        <div class="imagen" id="imagen2">
+            <img src="img/rapero.jpg" alt="Imagen 2">
+            <div class="texto">Siempre estas conmigo</div>
+        </div>
+
+        <div class="imagen" id="imagen2">
+            <img src="img/sec.jpg" alt="Imagen 2">
+            <div class="texto">Creciendo juntos</div>
+        </div>
+
+        <div class="imagen" id="imagen2">
+            <img src="img/prepa.jpg" alt="Imagen 2">
+            <div class="texto">Cumpliendo metas</div>
+        </div>
+    </div>
+
+    
+
+
+</body>
+
+</html>
